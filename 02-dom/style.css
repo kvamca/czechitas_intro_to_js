@@ -1,0 +1,40 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 5rem;
+	font-weight: 600;
+}
+
+h2 {
+	text-align: center;
+	margin-top: 3rem;
+	font-weight: 400;
+}
+
+.clanek {
+	padding: 0 4rem;
+}
+
+p {
+	margin: 1rem auto;
+	text-align: center;
+	font-size: 1rem;
+	padding: 0 15%;
+}
+
+p:not(:last-child) {
+	margin-bottom: 2rem;
+}
+
+img {
+	display: inline-block;
+	margin: 5rem auto;
+	min-height: 500px;
+}

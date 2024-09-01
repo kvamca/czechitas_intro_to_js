@@ -1,0 +1,41 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	background-color: #BDD3DE;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 5rem;
+	font-weight: 600;
+}
+
+.ctverec {
+	height: 10rem;
+	width: 10rem;
+	margin: 2rem auto;
+	background-image: linear-gradient(to right bottom, rgb(34, 228, 202), rgb(98, 255, 66));
+	transition: all 400ms ease-out;
+	border-radius: 0%;
+}
+
+.kruh {
+	border-radius: 50%;
+}
+
+.obdelnik {
+	height: 10rem;
+	width: 13rem;
+	margin: 2rem auto;
+	background-color: white;
+	transition: all 400ms ease-out;
+	border: solid 3px black;
+}
+
+.otoc {
+	transform: rotate(45deg);
+}
+
