@@ -5,7 +5,16 @@ let dice;
 let finalPoints;
 let gameRunning;
 
-finalPoints = 25;
+finalPoints = document.getElementById('winner-points');
+finalPoints.addEventListener('input', function() {
+    if (this.value === '') {
+        finalPoints = 20;
+    } else {
+        finalPoints = Number(this.value);
+    }
+});
+
+finalPoints = 20;
 
 function init(){
     points = [0,0];
@@ -20,8 +29,8 @@ function init(){
     document.getElementById("soucasne-0").textContent = "0";
     document.getElementById("soucasne-1").textContent = "0";
 
-    document.querySelector("#jmeno-0").textContent = "Hráč 1";
-    document.querySelector("#jmeno-1").textContent = "Hráč 2";
+    document.querySelector("#jmeno-0").textContent = "Player 1";
+    document.querySelector("#jmeno-1").textContent = "Player 2";
 
     document.querySelector(".hrac-0-panel").classList.remove("aktivni");
     document.querySelector(".hrac-1-panel").classList.remove("aktivni");
@@ -78,7 +87,7 @@ if (gameRunning) {
         document.querySelector(".hrac-" + activePlayer + "-panel").classList.add("vitez");
         document.querySelector(".kostka").style.display = "none";
         gameRunning = false;
-        
+
     } else {
         nextPlayer();
     }

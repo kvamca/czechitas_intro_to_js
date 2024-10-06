@@ -14,29 +14,37 @@
 <body>
     <div class="obsah clearfix">
         <div class="hrac-0-panel aktivni">
-            <div class="hrac-jmeno" id="jmeno-0">Hráč 1</div>
+            <div class="hrac-jmeno" id="jmeno-0">Player 1</div>
             <div class="hrac-body" id="body-0">43</div>
             <div class="hrac-soucasne-box">
-                <div class="hrac-soucasne-popisek">Body</div>
+                <div class="hrac-soucasne-popisek">Points</div>
                 <div class="hrac-soucasne-body" id="soucasne-0">11</div>
             </div>
         </div>
 
         <div class="hrac-1-panel">
-            <div class="hrac-jmeno" id="jmeno-1">Hráč 2</div>
+            <div class="hrac-jmeno" id="jmeno-1">Player 2</div>
             <div class="hrac-body" id="body-1">72</div>
             <div class="hrac-soucasne-box">
-                <div class="hrac-soucasne-popisek">Body</div>
+                <div class="hrac-soucasne-popisek">Points</div>
                 <div class="hrac-soucasne-body" id="soucasne-1">0</div>
             </div>
         </div>
 
-        <button class="tlacitko-novy"><i class="ion-ios-plus-outline"></i>Nová hra</button>
-        <button class="tlacitko-hod"><i class="ion-ios-loop"></i>Hoď kostkou</button>
-        <button class="tlacitko-dost"><i class="ion-ios-download-outline"></i>Dost</button>
+        <button class="tlacitko-novy"><i class="ion-ios-plus-outline"></i>New game</button>
+        <button class="tlacitko-hod"><i class="ion-ios-loop"></i>Throw dice</button>
+        <button class="tlacitko-dost"><i class="ion-ios-download-outline"></i>Save points</button>
 
         <div class="kostka">5</div>
     </div>
+
+    <div class="input">
+        Enter the points needed to win: 
+        <input type="number" min="20" step="1" placeholder="20" id="winner-points"
+         oninput="if (this.value == 1 || this.value == 0) this.value = '';"
+         onkeydown="return event.key >= 0 && event.key <= 9 || event.key === 'Backspace' || event.key === 'ArrowLeft' || event.key === 'ArrowRight' || event.key === 'Delete';"
+         ></div>
+
     <script src="app.js"></script>
 </body>
 </html>
